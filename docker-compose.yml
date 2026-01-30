@@ -1,0 +1,66 @@
+﻿services:
+  stock.service.api:
+    image: ${DOCKER_REGISTRY-}stockserviceapi
+    build:
+      context: .
+      dockerfile: Services/src/Stock.Service/Stock.Service.API/Dockerfile
+    ports:
+        - 7113:8080
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__default=Host=stockddatabase;Database=StockDb;Username=postgres;Password=P@ssw0rd
+      - MQServerConnSettings__Host=rabbitmq
+      - MQServerConnSettings__Port=5672
+      - MQServerConnSettings__User=guest
+      - MQServerConnSettings__Password=guest
+      - MQServerConnSettings__SenderEnabled=true
+      - MQServerConnSettings__ReceiverEnabled=false
+    depends_on:
+      stockddatabase:
+        condition: service_healthy
+        restart: true
+      rabbitmq:
+        condition: service_healthy
+     # نضيف wait-for-it script قبل التشغيل
+    entrypoint: ["./wait-for-it.sh", "rabbitmq:5672", "--", "dotnet", "Stock.Service.API.dll"]
+
+
+  stockddatabase:
+    image: postgres:16.9-bullseye
+    container_name: postgres_db
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: P@ssw0rd
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 10s
+
+  rabbitmq:
+      image: rabbitmq:3-management
+      container_name: rabbitmq
+      hostname: rabbitmq
+      environment:
+        RABBITMQ_DEFAULT_USER: guest
+        RABBITMQ_DEFAULT_PASS: guest
+        RABBITMQ_DEFAULT_VHOST: /
+      ports:
+        - "5672:5672"     # AMQP
+        - "15672:15672"   # Management UI
+      volumes:
+        - rabbitmq_data:/var/lib/rabbitmq
+      healthcheck:
+        test: ["CMD", "rabbitmqctl", "status"]
+        interval: 5s
+        timeout: 5s
+        retries: 10
+      restart: always
+volumes:
+  postgres_data:
+  rabbitmq_data:

@@ -1,0 +1,18 @@
+<Solution>
+  <Folder Name="/Kernel/">
+    <Project Path="Kernel/RabbitMQ.Kernel.Base/RabbitMQ.Kernel.Base.csproj" />
+    <Project Path="Kernel/RabbitMQ.Kernel/RabbitMQ.Kernel.csproj" />
+  </Folder>
+  <Folder Name="/Services/" />
+  <Folder Name="/Services/Stock.Service/" />
+  <Folder Name="/Services/Stock.Service/src/">
+    <Project Path="Services/src/Stock.Service/Stock.Service.API/Stock.Service.API.csproj" />
+    <Project Path="Services/src/Stock.Service/Stock.Service.Application/Stock.Service.Application.csproj" />
+    <Project Path="Services/src/Stock.Service/Stock.Service.Domain/Stock.Service.Domain.csproj" />
+    <Project Path="Services/src/Stock.Service/Stock.Service.Persistence/Stock.Service.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/Services/Stock.Service/test/" />
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+</Solution>
