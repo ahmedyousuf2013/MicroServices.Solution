@@ -5,7 +5,7 @@ name: .NET
       - main
   pull_request:
     branches:
-      - master
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,9 +18,9 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
       - name: Build
-        run: dotnet build --no-restore
+        run: dotnet restore MicroServices.Solution.sln
       - name: Test
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test MicroServices.Solution.sln --no-build --verbosity norma
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
@@ -34,6 +34,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          file: ./MicroServices.Solution/Services/src/Stock.Service/Stock.Service.API/Dockerfile
+          file: ./Dockerfile
           push: true
           tags: 'goldena91/stock.service.rappitmq:latest'
