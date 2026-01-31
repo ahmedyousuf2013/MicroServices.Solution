@@ -2,7 +2,7 @@ name: .NET
 'on':
   push:
     branches:
-      - master
+      - maain
   pull_request:
     branches:
       - master
