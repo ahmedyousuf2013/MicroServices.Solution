@@ -16,7 +16,7 @@ namespace Stock.Service.Persistence.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var ids = new Guid[] { Guid.NewGuid(), Guid.NewGuid() };
+            var ids = new Guid[] { new Guid("df81c0d5-4628-4ff9-8ac7-44230236750f"), new Guid("f128319a-2981-4b55-ba98-bd0df16c482b") };
             modelBuilder.ApplyConfiguration(new OwnerContextConfiguration(ids));
             modelBuilder.ApplyConfiguration(new AccountContextConfiguration(ids));
         }

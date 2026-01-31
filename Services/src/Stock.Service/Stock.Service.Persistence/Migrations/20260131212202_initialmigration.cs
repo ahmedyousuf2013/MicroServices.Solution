@@ -67,8 +67,8 @@ namespace Stock.Service.Persistence.Migrations
                 columns: new[] { "Id", "Address", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("017cddac-3e3f-4e94-84ac-47a15cc34bf1"), "John Doe's address", "John Doe" },
-                    { new Guid("bfd3f7f6-c0a6-4c03-b562-3594a9228d32"), "Jane Doe's address", "Jane Doe" }
+                    { new Guid("df81c0d5-4628-4ff9-8ac7-44230236750f"), "John Doe's address", "John Doe" },
+                    { new Guid("f128319a-2981-4b55-ba98-bd0df16c482b"), "Jane Doe's address", "Jane Doe" }
                 });
 
             migrationBuilder.InsertData(
@@ -76,9 +76,9 @@ namespace Stock.Service.Persistence.Migrations
                 columns: new[] { "Id", "Description", "OwnerId", "Type" },
                 values: new object[,]
                 {
-                    { new Guid("a7de2063-ab55-41cd-b0cf-564942a09fd0"), "Cash account for our users", new Guid("017cddac-3e3f-4e94-84ac-47a15cc34bf1"), 0 },
-                    { new Guid("cb7a1a26-c504-46fb-ba3c-a8489d1591af"), "Income account for our users", new Guid("bfd3f7f6-c0a6-4c03-b562-3594a9228d32"), 3 },
-                    { new Guid("ff1db935-247f-4a95-b397-dda19b46976f"), "Savings account for our users", new Guid("bfd3f7f6-c0a6-4c03-b562-3594a9228d32"), 1 }
+                    { new Guid("57232482-1ae2-4114-bc26-54ba9b4d32df"), "Income account for our users", new Guid("f128319a-2981-4b55-ba98-bd0df16c482b"), 3 },
+                    { new Guid("7d8e0925-525f-469e-bae7-942059e6e121"), "Cash account for our users", new Guid("df81c0d5-4628-4ff9-8ac7-44230236750f"), 0 },
+                    { new Guid("d0301f10-8b0b-4ed6-bc17-cf78a9e31d9c"), "Savings account for our users", new Guid("f128319a-2981-4b55-ba98-bd0df16c482b"), 1 }
                 });
 
             migrationBuilder.CreateIndex(

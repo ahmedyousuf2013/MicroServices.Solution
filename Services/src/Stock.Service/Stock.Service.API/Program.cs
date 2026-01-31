@@ -50,3 +50,7 @@ using Stock.Service.Persistence.Context;
 
     app.Run();
 }
+namespace Stock.Service.API
+{
+    public partial class Program { }
+}

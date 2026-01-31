@@ -11,7 +11,9 @@
     <Project Path="Services/src/Stock.Service/Stock.Service.Domain/Stock.Service.Domain.csproj" />
     <Project Path="Services/src/Stock.Service/Stock.Service.Persistence/Stock.Service.Persistence.csproj" />
   </Folder>
-  <Folder Name="/Services/Stock.Service/test/" />
+  <Folder Name="/Services/Stock.Service/test/">
+    <Project Path="Services/test/Stock.Service.Integration.Test/Stock.Service.Integration.Test.csproj" Id="7cf24c97-9a1e-4fe3-aab3-5eb745380b29" />
+  </Folder>
   <Project Path="docker-compose.dcproj">
     <Build />
   </Project>

@@ -47,23 +47,23 @@ namespace Stock.Service.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a7de2063-ab55-41cd-b0cf-564942a09fd0"),
+                            Id = new Guid("7d8e0925-525f-469e-bae7-942059e6e121"),
                             Description = "Cash account for our users",
-                            OwnerId = new Guid("017cddac-3e3f-4e94-84ac-47a15cc34bf1"),
+                            OwnerId = new Guid("df81c0d5-4628-4ff9-8ac7-44230236750f"),
                             Type = 0
                         },
                         new
                         {
-                            Id = new Guid("ff1db935-247f-4a95-b397-dda19b46976f"),
+                            Id = new Guid("d0301f10-8b0b-4ed6-bc17-cf78a9e31d9c"),
                             Description = "Savings account for our users",
-                            OwnerId = new Guid("bfd3f7f6-c0a6-4c03-b562-3594a9228d32"),
+                            OwnerId = new Guid("f128319a-2981-4b55-ba98-bd0df16c482b"),
                             Type = 1
                         },
                         new
                         {
-                            Id = new Guid("cb7a1a26-c504-46fb-ba3c-a8489d1591af"),
+                            Id = new Guid("57232482-1ae2-4114-bc26-54ba9b4d32df"),
                             Description = "Income account for our users",
-                            OwnerId = new Guid("bfd3f7f6-c0a6-4c03-b562-3594a9228d32"),
+                            OwnerId = new Guid("f128319a-2981-4b55-ba98-bd0df16c482b"),
                             Type = 3
                         });
                 });
@@ -112,13 +112,13 @@ namespace Stock.Service.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("017cddac-3e3f-4e94-84ac-47a15cc34bf1"),
+                            Id = new Guid("df81c0d5-4628-4ff9-8ac7-44230236750f"),
                             Address = "John Doe's address",
                             Name = "John Doe"
                         },
                         new
                         {
-                            Id = new Guid("bfd3f7f6-c0a6-4c03-b562-3594a9228d32"),
+                            Id = new Guid("f128319a-2981-4b55-ba98-bd0df16c482b"),
                             Address = "Jane Doe's address",
                             Name = "Jane Doe"
                         });

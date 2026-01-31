@@ -24,21 +24,21 @@ namespace Stock.Service.Persistence.Configuration
                 .HasData(
                 new Account
                 {
-                    Id = Guid.NewGuid(),
+                    Id =new Guid("7d8e0925-525f-469e-bae7-942059e6e121"),
                     Type = TypeOfAccount.Cash,
                     Description = "Cash account for our users",
                     OwnerId = _ids[0]
                 },
                 new Account
                 {
-                    Id = Guid.NewGuid(),
+                    Id = new Guid("d0301f10-8b0b-4ed6-bc17-cf78a9e31d9c"),
                     Type = TypeOfAccount.Savings,
                     Description = "Savings account for our users",
                     OwnerId = _ids[1]
                 },
                 new Account
                 {
-                    Id = Guid.NewGuid(),
+                    Id = new Guid("57232482-1ae2-4114-bc26-54ba9b4d32df"),
                     Type = TypeOfAccount.Income,
                     Description = "Income account for our users",
                     OwnerId = _ids[1]
