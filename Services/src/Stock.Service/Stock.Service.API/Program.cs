@@ -27,11 +27,8 @@ using Stock.Service.Persistence.Context;
         options.UseNpgsql(builder.Configuration["ConnectionStrings:Default"]);
 
     });
-    var mqServerConnSettings = builder.Configuration.GetSection("MQServerConnSettings");
-    builder.Services.Configure<MQServerConnSettings>(mqServerConnSettings);
-
    
-    builder.Services.AddQueueing(mqServerConnSettings);
+    builder.Services.AddQueueing(builder.Configuration);
 
     builder.Services.AddAddQueueMessageConsumer();
 

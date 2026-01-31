@@ -19,11 +19,11 @@ namespace RabbitMQ.Kernel.QueueingStartupInjection
     public static class QueueingStartupInjection
     {
 
-        public static void AddQueueing(this IServiceCollection services, IConfigurationSection mqServerConnSettings)
+        public static void AddQueueing(this IServiceCollection services, IConfiguration configuration )
         {
             services.AddSingleton<ConnectionFactory>(provider =>
             {
-                var MQSereversettings = mqServerConnSettings.Get<MQServerConnSettings>();
+                var MQSereversettings = configuration.GetSection("MQServerConnSettings").Get<MQServerConnSettings>();
                 var factory = new ConnectionFactory
                 {
                     UserName = MQSereversettings.User,
