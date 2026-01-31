@@ -14,9 +14,6 @@ namespace Stock.Service.API
 
             dbContext.Database.Migrate();
 
-
-
-
         }
     }
 }
