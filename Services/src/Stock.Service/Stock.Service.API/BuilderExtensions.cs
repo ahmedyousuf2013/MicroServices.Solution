@@ -13,6 +13,8 @@ namespace Stock.Service.API
                 scope.ServiceProvider.GetRequiredService<StockServiceContext>();
 
             dbContext.Database.Migrate();
+
+
         }
     }
 }
