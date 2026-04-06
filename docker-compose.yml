@@ -3,7 +3,7 @@
     image: ${DOCKER_REGISTRY-}stockserviceapi
     build:
       context: .
-      dockerfile: Services/src/Stock.Service/Stock.Service.API/Dockerfile
+      dockerfile: Services/src/Stock/Stock.Service.API/Dockerfile
     ports:
         - 7113:8080
     environment:

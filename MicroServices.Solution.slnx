@@ -4,12 +4,12 @@
     <Project Path="Kernel/RabbitMQ.Kernel/RabbitMQ.Kernel.csproj" />
   </Folder>
   <Folder Name="/Services/" />
-  <Folder Name="/Services/Stock.Service/" />
-  <Folder Name="/Services/Stock.Service/src/">
-    <Project Path="Services/src/Stock.Service/Stock.Service.API/Stock.Service.API.csproj" />
-    <Project Path="Services/src/Stock.Service/Stock.Service.Application/Stock.Service.Application.csproj" />
-    <Project Path="Services/src/Stock.Service/Stock.Service.Domain/Stock.Service.Domain.csproj" />
-    <Project Path="Services/src/Stock.Service/Stock.Service.Persistence/Stock.Service.Persistence.csproj" />
+  <Folder Name="/Services/Stock/" />
+  <Folder Name="/Services/Stock/src/">
+    <Project Path="Services/src/Stock/Stock.Service.API/Stock.Service.API.csproj" />
+    <Project Path="Services/src/Stock/Stock.Service.Application/Stock.Service.Application.csproj" />
+    <Project Path="Services/src/Stock/Stock.Service.Domain/Stock.Service.Domain.csproj" />
+    <Project Path="Services/src/Stock/Stock.Service.Persistence/Stock.Service.Persistence.csproj" />
   </Folder>
   <Folder Name="/Services/Stock.Service/test/">
     <Project Path="Services/test/Stock.Service.Integration.Test/Stock.Service.Integration.Test.csproj" Id="7cf24c97-9a1e-4fe3-aab3-5eb745380b29" />
