@@ -4,6 +4,11 @@
     <Project Path="Kernel/RabbitMQ.Kernel/RabbitMQ.Kernel.csproj" />
   </Folder>
   <Folder Name="/Services/" />
+  <Folder Name="/Services/Catalog/" />
+  <Folder Name="/Services/Catalog/src/">
+    <Project Path="../Catalog.Service.API/Catalog.Service.API.csproj" Id="231a173c-abbc-427a-95ca-4a1a6d61f880" />
+  </Folder>
+  <Folder Name="/Services/Catalog/test/" />
   <Folder Name="/Services/Stock/" />
   <Folder Name="/Services/Stock/src/">
     <Project Path="Services/src/Stock/Stock.Service.API/Stock.Service.API.csproj" />
