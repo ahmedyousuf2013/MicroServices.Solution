@@ -25,3 +25,6 @@
 /Stock/tests/Stock.Service.Integration.Test/obj
 /tasks
 /Catalog/Catalog.Service.API/.vs/Catalog.Service.API
+/Catalog/src/Catalog.Service.API/.vs/Catalog.Service.API
+/Catalog/src/Catalog.Service.API/bin/Debug/net10.0
+/Catalog/src/Catalog.Service.API/obj
