@@ -10,6 +10,9 @@ namespace Stock.Service.Domain.Dtos
     [QueueName("orders-queue")]
     public class OrderDto : IQueueMessage
     {
+
+
+
         public OrderDto()
         {
 
